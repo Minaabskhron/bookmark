@@ -1,5 +1,6 @@
 h1{
     font-family: 'Pacifico', cursive;
+    z-index: 5;
 }
 .home{
     border:dotted 2px ;
@@ -36,4 +37,24 @@ h1{
     background-repeat: no-repeat;
     background-position: right;
     background-size: 1.3em;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    background-color: #FEC260;
+    right: 0;
+    left: 0;
+    top: 55%;
+    bottom: 30%;
+    z-index: -1;
+    transition: all .25s;
+}
+h1:hover::after{
+    top: 45%;
+}
+h4{
+    background-image:linear-gradient(to right ,yellow,green);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
