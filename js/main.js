@@ -8,7 +8,7 @@ if(localStorage.getItem("Website")!=null)
     websiteContainer=JSON.parse(localStorage.getItem("Website"));
     displayItems();
 }
-
+var closeBtnElement=document.getElementById("myLayer");
 
 function submitWebsite(){
     if(validateSiteNAme() && validateSiteURL())
@@ -25,7 +25,6 @@ function submitWebsite(){
     }
     else
     {
-        var closeBtnElement=document.getElementById("myLayer");
         closeBtnElement.classList.remove("d-none")
     }
 
@@ -70,24 +69,37 @@ function validateSiteURL()
     return URLregex.test(websiteURLInput.value);
 }
 
+var SiteNameVar= document.getElementById("siteName");
+var SiteURLVar= document.getElementById("SiteUrl");
+
 function validateSiteNameInWrite(){
 
     
     if(validateSiteNAme())
     {
-        document.getElementById("siteNameID").innerHTML=`
-        <input onkeydown="validateSiteNameInWrite();" type="text" id="siteName" placeholder="Bookmark Name" class="form-control right fw-medium"/>`
+        SiteNameVar.classList.add("right")
     }
     else
     {
-        document.getElementById("siteNameID").innerHTML=`
-        <input type="text" onkeydown="validateSiteNameInWrite();" id="siteName" placeholder="Bookmark Name" class="form-control wrong fw-medium"/>`
+        SiteNameVar.classList.remove("right")
+        SiteNameVar.classList.add("wrong")
     }
+}
 
+function validateSiteURLInWrite()
+{
+    if(validateSiteURL())
+    {
+        SiteURLVar.classList.add("right")
+    }
+    else
+    {
+        SiteURLVar.classList.remove("right")
+        SiteURLVar.classList.add("wrong")
+    }
 }
 
 function closeBtnFuncticlose()
 {
-    var closeBtnElement=document.getElementById("myLayer");
     closeBtnElement.classList.add("d-none")
 }

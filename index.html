@@ -47,17 +47,14 @@
                     <h4 class="text-center py-2"><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="ms-2 fa-solid fa-bookmark"></i></h4>
                     <div>
                         <label for="siteName" class="py-2 fw-medium"><i class="me-2 fa-solid fa-book-bookmark"></i> Site Name</label>
-                        <div id="siteNameID">
-                            <input type="text" id="siteName" placeholder="Bookmark Name" class="form-control fw-medium"/>    
+                        <input type="text" onkeyup="validateSiteNameInWrite()" id="siteName" placeholder="Bookmark Name" class="form-control fw-medium"/>    
                                
-                        </div>
 
                     </div>
                     <div>
                         <label for="SiteUrl" class="py-2 fw-medium"><i class="me-2 fa-solid fa-link"></i> Site URL</label>
-                        <div id="siteURLID">
-                            <input type="text" id="SiteUrl" placeholder="Website URL" class="form-control fw-medium"/>
-                        </div>
+                         <input type="text" onkeyup="validateSiteURLInWrite()" id="SiteUrl" placeholder="Website URL" class="form-control fw-medium"/>
+
 
                     </div>
                     <div class="text-center pt-3">
