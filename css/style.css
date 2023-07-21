@@ -1,6 +1,6 @@
 h1{
     font-family: 'Pacifico', cursive;
-    z-index: 5;
+    z-index: 1;
 }
 .home{
     border:dotted 2px ;
@@ -57,4 +57,32 @@ h4{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+.layer{
+    position: absolute;
+    background-color: rgba(0, 0, 0,.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.header >div{
+    width: 20px;
+    height: 20px;
+}
+.header :nth-child(1){
+    background-color: #F15F5D;
+}
+.header :nth-child(2){
+    background-color: #FEBE2E;
+}
+.header :nth-child(3){
+    background-color: #4DB748;
+}
+.my-modal{
+    background-color: white;
+}
+.myPI{
+    color: #BB4120;
 }

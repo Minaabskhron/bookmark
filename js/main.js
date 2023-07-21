@@ -25,8 +25,8 @@ function submitWebsite(){
     }
     else
     {
-        alert(`The name should write at least 3 character or number
-        and the URL should be valid`)
+        var closeBtnElement=document.getElementById("myLayer");
+        closeBtnElement.classList.remove("d-none")
     }
 
 }
@@ -84,4 +84,10 @@ function validateSiteNameInWrite(){
         <input type="text" onkeydown="validateSiteNameInWrite();" id="siteName" placeholder="Bookmark Name" class="form-control wrong fw-medium"/>`
     }
 
+}
+
+function closeBtnFuncticlose()
+{
+    var closeBtnElement=document.getElementById("myLayer");
+    closeBtnElement.classList.add("d-none")
 }
